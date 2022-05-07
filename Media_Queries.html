@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+        .box{
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-size: 72px;
+            display: none;
+        }
+    
+        @media (max-width: 500px){
+            #box1{
+                display: block;
+            }
+        }
+
+        @media (max-width: 800px) and (min-width: 500px){
+            #box2{
+                display: block;
+                background-color: blue;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) and (min-width: 800px){      /* "only screen" is used to support only screen media type*/
+            #box3{
+                display: block;
+                background-color: darkgreen;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: italic;
+            }
+        }
+
+        @media only screen and (max-width: 2000px) and (min-width: 1200px){
+            #box4{
+                display: block;
+                background-color: deeppink;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-style: oblique;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">Size of a Smartphone</div>
+    <div class="box" id="box2">Size of a Tablet</div>
+    <div class="box" id="box3">Size of a computer</div>
+    <div class="box" id="box4">Size of a WideScreen computer</div>
+</body>
+</html>
